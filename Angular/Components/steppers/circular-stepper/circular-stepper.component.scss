@@ -1,0 +1,36 @@
+@import 'colors';
+@import 'variables';
+@import 'fonts/fonts';
+@import 'commons';
+
+.circular-stepper {
+  position: relative;
+}
+
+.circle {
+  transform: rotate(-90deg);
+
+  &__background-circle {
+    fill: none;
+    stroke: #D2D2D2;
+  }
+
+  &__progress-circle {
+    fill: none;
+    stroke: #7E3451;
+    stroke-dashoffset: 0px;
+    transition: stroke-dasharray 0.7s linear 0s;
+    stroke-linecap: round;
+  }
+}
+
+.circular-stepper__title {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-14;
+  color: $color-darker-blue;
+}

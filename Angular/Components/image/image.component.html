@@ -1,0 +1,7 @@
+<picture class="image">
+  <source
+    *ngIf="imageMobileSrc"
+    [srcset]="imageMobileSrc"
+    [media]="breakpoint" />
+  <img [ngClass]="['image', type]" src="{{ imageSrc }}" alt="{{ altText }}" />
+</picture>

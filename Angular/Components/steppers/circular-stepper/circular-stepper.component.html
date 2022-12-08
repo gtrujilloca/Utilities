@@ -1,0 +1,27 @@
+<div class="circular-stepper" [ngStyle]="contentStyle">
+  <div class="circular-stepper__title">
+    <span>{{title}}</span>
+  </div>
+  <svg class="circle"
+    [attr.width]="widthCircle"
+    [attr.height]="heightCircle"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      class="circle__background-circle"
+      [attr.cx]="cx"
+      [attr.cy]="cy"
+      [attr.r]="ratio"
+      [ngStyle]="backgroundStyle"
+    >
+    </circle>
+    <circle
+      class="circle__progress-circle"
+      [attr.cx]="cx"
+      [attr.cy]="cy"
+      [attr.r]="ratio"
+      [ngStyle]="progressStyle"
+    >
+    </circle>
+  </svg>
+</div>

@@ -1,0 +1,15 @@
+<div class="plain-stepper">
+  <div class="plain-stepper__steps">
+    <div class="plain-stepper__actual-step" [ngStyle]="inlineStyles()"></div>
+    <ul class="steps">
+      <li
+        class="steps__step"
+        *ngFor="let step of stepsArray(); let i = index"
+        [ngClass]="{'steps__step--selected': i  <= position}"
+      ></li>
+    </ul>
+  </div>
+  <div *ngIf="showActualIndicatior" class="plain-stepper__actual-indicator">
+    {{position}}
+  </div>
+</div>

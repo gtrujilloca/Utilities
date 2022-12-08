@@ -1,0 +1,72 @@
+@import 'colors';
+@import 'variables';
+@import 'fonts/fonts';
+
+$size: 10px;
+.plain-stepper {
+  justify-content: right;
+
+  @media screen and (max-width: $breakpoint-md) {
+    justify-content: center;
+  }
+
+  display: flex;
+  &__steps {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+    .steps {
+      display: flex;
+      gap: $size;
+      .steps__step {
+        width: $size;
+        height: $size;
+        background-color: $color-light-gray;
+        border-radius: 100px;
+        transition: all 0.7s;
+        &--selected{
+          transition: all 0.7s;
+          background-color: $color-yellow;
+        }
+      }
+    }
+  }
+  &__actual-step {
+    position: absolute;
+    border-radius: 100px;
+    width: $size * 3;
+    height: $size;
+    background-color: $color-dark-blue;
+    transition: all 0.6s;
+  }
+  &__actual-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 34px;
+    background-image: url('../../../../assets/balls/blue.svg');
+    color: $color-light-green;
+    font-size: $font-size-18;
+    font-weight: $font-weight-600;
+    transition: all 5s;
+  }
+}
+
+@keyframes fadeIn {
+  0%   { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+.stepperAlignLeft {
+  justify-content: left;
+}
+
+.stepperAlignCenter {
+  justify-content: center;
+}
+
+.stepperAlignRight {
+  justify-content: right;
+}

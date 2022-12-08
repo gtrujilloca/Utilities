@@ -1,0 +1,27 @@
+<section
+  (mouseenter)="stopCountDown()"
+  (mouseleave)="countDown()"
+  #toast
+  class="toast card"
+  [ngClass]="getToastColor()"
+  [@openClose]="toastService.data && toastService.data.show ? 'open' : 'closed'"
+  [hidden]="toastService.data && !toastService.data.show">
+  <article class="toast__body" *ngIf="toastService.data">
+    <img class="toast__body__icon" alt="toast icon" [src]="getToastIcon()" />
+    <div class="toast__body__text">
+      <h5 class="toast_title" *ngIf="toastService.data?.title">
+        {{ toastService.data.title }}
+      </h5>
+      <p class="toast_text">
+        {{ toastService.data.content }}
+      </p>
+    </div>
+    <img
+      class="toast__body__close"
+      alt="close toast icon"
+      src="/shared/assets/favicons/plus-icon.svg"
+      (click)="closeToast()" />
+  </article>
+
+  <div class="progress__bar" [ngClass]="getToastColor()" #element></div>
+</section>
