@@ -1,0 +1,44 @@
+{
+  "/authentication/*": {
+    "target": "https://apidev.pagosredeban.com",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/master-data/*": {
+    "target": "https://apidev.pagosredeban.com",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/business/*": {
+    "target": "https://apidev.pagosredeban.com",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/user/*": {
+    "target": "https://apidev.pagosredeban.com",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/identification/*": {
+    "target": "https://apidev.pagosredeban.com",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/payment/*": {
+    "target": "https://apidev.pagosredeban.com",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/product/*": {
+    "target": "https://apidev.pagosredeban.com",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}
