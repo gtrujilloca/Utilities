@@ -1,0 +1,69 @@
+
+.loading-row--shimmer {
+  z-index: 1;
+  // -webkit-mask: linear-gradient(-60deg, rgb(0, 0, 0, .0) 30%, rgba(0, 0, 0, 0.2) 10%, rgb(0, 0, 0, .0) 50%, rgb(0, 0, 0, .0) 30%, rgb(0, 0, 0, .0) 1%) right/300% 100%;
+  background-image: linear-gradient(
+    90deg,
+    $background 0%,
+    rgb(69, 36, 126) 40%,
+    $background 50%,
+    $background 100%
+  );
+  cursor: wait;
+  background-size: 200% 100%;
+  animation: animation-background-moving-200 2s linear infinite;
+  opacity: 0;
+  // for childs delay animation
+  // @for $i from 1 through 10 {
+  //   &:nth-child(#{$i}n) {
+  //     animation-delay: #{$i * 0.1}s;
+  //   }
+  // }
+}
+
+.shimmer {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 24px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background-image: linear-gradient(
+    90deg,
+    $blackcurrant 0%,
+    rgb(69, 36, 126) 40%,
+    $blackcurrant 50%,
+    $blackcurrant 100%
+  );
+  cursor: wait;
+  background-size: 200% 100%;
+  animation: 0.9s shimmer linear infinite;
+}
+.removeScrooll {
+  overflow: hidden;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200%;
+  }
+}
+
+@keyframes animation-background-moving-200 {
+  0% {
+    background-position: 100%;
+    opacity: 1;
+  }
+
+  80% {
+    background-position: -80%;
+    opacity: 0.1;
+  }
+
+  100% {
+    background-position: -100%;
+    opacity: 1;
+  }
+}
